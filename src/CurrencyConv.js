@@ -26,7 +26,6 @@ export default class CurrencyConv extends React.Component {
     }
 
     handleFromValue = (e) => {
-        e.preventDefault()
         let valueFrom = e.target.value;
         const resultvalue = this.getConverterdValues(this.state.selectedFrom, this.state.selectedTo, valueFrom);
         const withdecimal = this.state.selectedTo !== 'JPY' ? parseFloat(resultvalue).toFixed(2) : parseFloat(resultvalue).toFixed(0);
